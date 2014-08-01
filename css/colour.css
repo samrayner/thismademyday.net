@@ -1,0 +1,140 @@
+/*
+Title:      	Colour Styles
+Author:     	Sam Rayner - http://samrayner.com
+Updated:    	January 2010
+*/
+
+
+/* BACKGROUNDS
+================================================== */
+
+body 									{ background-color: rgba(245, 245, 243, 1); }
+
+header p a:link, 
+header p a:visited 		{ background-color: rgba(50, 150, 150, 0.2); }
+
+header p a:hover, 
+header p a:active, 
+header p a:focus 			{ background-color: rgba(50, 150, 150, 0.4); }
+
+#search-results ul,
+#search-results li a:hover, 
+#search-results li a:active,
+#search-results li a:focus,
+pre, th, code, 
+.chat .odd cite				{ background-color: rgba(50, 40, 20, 0.08); }
+
+nav a:link,
+nav a:visited,
+.tags a:link,
+.tags a:visited 			{ background-color: rgba(0, 0, 0, 0.8); }
+
+nav a:hover,
+nav a:active,
+nav a:focus,
+.tags a:hover,
+.tags a:active,
+.tags a:focus					{ background-color: rgba(0, 0, 0, 0.7); }
+
+.chat .even cite			{ background-color: rgba(150, 50, 50, 0.2); }
+
+.post-date:link, 
+.post-date:visited 		{ background-color: rgba(150, 50, 50, 1); }
+
+.post-date:hover,
+.post-date:active,
+.post-date:focus 			{ background-color: rgba(170, 70, 70, 1); }
+
+mark,
+#filter-banner 				{ background-color: rgba(250, 200, 50, 0.5); }
+
+.media, .post-body img, 
+.notes 								{ background-color: rgba(0, 0, 0, 0.04); }
+
+
+/* TEXT
+================================================== */
+
+/* Blacks
+-------------------------------------------------- */
+
+body,
+header a:link,
+header a:visited,
+h2 a:link,
+h2 a:visited,
+h3 a:link,
+h3 a:visited,
+h4 a:link,
+h4 a:visited,
+.audio h2 .artist,
+#search-results li a { color: rgba(0, 0, 0, 0.8); }
+
+code,
+header a:hover,
+header a:active,
+header a:focus,
+h2 a:hover, h2 a:active, h2 a:focus,
+h3 a:hover, h3 a:active, h3 a:focus,
+h4 a:hover, h4 a:active, h4 a:focus { color: rgba(0, 0, 0, 1); }
+
+.audio .track,
+.audio .album { color: rgba(0, 0, 0, 0.5); }
+
+blockquote cite,
+.note-count { color: rgba(0, 0, 0, 0.6); }
+
+/* Greens
+-------------------------------------------------- */
+
+a:link, a:visited	{ color: rgba(50, 150, 150, 1); }
+
+a:hover, a:active, a:focus { color: rgba(15, 80, 80, 1); }
+
+/* Whites
+-------------------------------------------------- */
+
+#post-list .post-date,
+#wrapper nav a,
+#wrapper .tags a 	{ color: rgba(245, 245, 243, 1); }
+
+/* Transparent
+-------------------------------------------------- */
+
+.audio h2 { color: rgba(0,0,0,0); }
+
+
+/* BORDERS
+================================================== */
+
+th, td 					{ border-color: rgba(200, 200, 200, 1); }
+abbr, acronym 	{ border-color: rgba(0, 0, 0, 0.4); }
+
+#search-results li a,
+.notes li { 
+	border-bottom-color: rgba(0, 0, 0, 0.1);
+	border-top-color: rgba(255, 255, 255, 0.5);
+}
+
+.post-date,
+.tags a,
+nav a {
+	border-color: rgba(0, 0, 0, 0.5);
+}
+
+.media,
+.post-body img,
+.chat cite,
+#filter-banner,
+.notes { 
+	border-color: rgba(0, 0, 0, 0.08);
+}
+
+
+/* OPACITIES
+================================================== */
+
+h1 a:hover,
+h1 a:focus {
+	opacity: 0.8;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+    <meta charset="utf-8">
+
+    <title>{Title}{block:PostTitle} - {PostTitle}{/block:PostTitle}</title>
+
+      <link rel="stylesheet" href="http://assets.thismademyday.net/css/master.css" />
+      <!--[if lte IE 8]><link rel="stylesheet" href="http://assets.thismademyday.net/css/ie.css" /><![endif]-->
+
+      <link rel="alternate" type="application/rss+xml" title="This Made My Day RSS Feed" href="http://thismademyday.net/rss"/>
+
+      <link rel="icon" href="http://assets.thismademyday.net/img/favicon.ico" />
+      <link rel="apple-touch-icon" href="http://assets.thismademyday.net/img/apple-touch-icon.png">
+
+      <script src="http://assets.thismademyday.net/js/livesearch.js"></script>
+
+      <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  </head>
+  <body id="thismademyday-net">
+  <div id="wrapper">
+
+    <header>
+      <h1><a href="/" title="Home">{Title}</a></h1>
+      {Description}
+    </header>
+
+    <section id="post-list">
+
+      {block:SearchPage}
+      <h2 id="filter-banner"><strong>{SearchResultCount}</strong> results for <strong>&lsquo;{SearchQuery}&rsquo;</strong>:</h2>
+      {/block:SearchPage}
+
+      {block:TagPage}
+      <h2 id="filter-banner">Posts tagged <strong>&lsquo;{Tag}&rsquo;</strong>:</h2>
+      {/block:TagPage}
+
+      {block:Posts}
+      <article class="post {block:Text}text{/block:Text}{block:Quote}quote{/block:Quote}{block:Link}link{/block:Link}{block:Chat}chat{/block:Chat}{block:Photo}photo{/block:Photo}{block:Photoset}photoset{/block:Photoset}{block:Video}video{/block:Video}{block:Audio}audio{/block:Audio}">
+
+        {block:Text}
+        {block:Title}<h2>{block:IndexPage}<a href="{Permalink}" rel="bookmark">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h2>{/block:Title}
+        <div class="post-body">{Body}</div>
+        {/block:Text}
+
+        {block:Quote}
+        <blockquote>{Quote}
+        {block:Source}<cite>{Source}</cite>{/block:Source}
+        </blockquote>
+        {/block:Quote}
+
+        {block:Link}
+        <h2><a href="{URL}" rel="external">{Name}</a></h2>
+          {block:Description}
+          <div class="post-body">{Description}</div>
+          {/block:Description}
+        {/block:Link}
+
+        {block:Chat}
+        {block:Title}<h2>{block:IndexPage}<a href="{Permalink}" rel="bookmark">{/block:IndexPage}{Title}{block:IndexPage}</a>{/block:IndexPage}</h2>{/block:Title}
+
+        <ol class="dialog">
+          {block:Lines}
+          <li class="{Alt}">
+             {block:Label}<cite>{Label}</cite> {/block:Label}
+             <q>{Line}</q>
+           </li>
+           {/block:Lines}
+        </ol>
+        {/block:Chat}
+
+        {block:Photo}
+          <div class="media">{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}</div>
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photo}
+
+        {block:Photoset}
+          <div class="media">{Photoset-500}</div>
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Photoset}
+
+        {block:Video}
+          <div class="media">{Video-500}</div>
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        {/block:Video}
+
+        {block:Audio}
+          <div class="albumart">{block:AlbumArt}<img src="{AlbumArtURL}" />{/block:AlbumArt}</div>
+          {block:Artist}<h2><span class="artist">{Artist}</span>{block:TrackName} &ndash; <span class="track">{TrackName}</span>{/block:TrackName}</h2>{/block:Artist}
+          {block:Album}<h3 class="album">From &lsquo;{Album}&rsquo;</h3>{/block:Album}
+          {AudioPlayerGrey}
+          {block:Caption}<div class="post-body">{Caption}</div>{/block:Caption}
+        {/block:Audio}
+
+        {block:PostNotes}
+        <aside id="notes">
+          {PostNotes}
+        </aside>
+        {/block:PostNotes}
+
+        <footer class="meta">
+          <a class="post-date" href="{Permalink}" rel="bookmark">
+            <time pubdate datetime="{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}T{24HourWithZero}:{Minutes}:{Seconds}+00:00">
+              <span class="day">{DayOfMonthWithZero}</span>
+              <span class="month">{ShortMonth}</span>
+            </time>
+          </a>
+
+          {block:HasTags}
+          <div class="tags">
+            <h3>Tags</h3>
+            <ul>
+              {block:Tags}
+              <li><a href="{TagURL}" rel="tag">{Tag}</a></li>
+              {/block:Tags}
+            </ul>
+          </div>
+          {/block:HasTags}
+
+          {block:NoteCount}
+            <p class="note-count">{NoteCountWithLabel}</p>
+          {/block:NoteCount}
+        </footer>
+
+      </article><!--.post-->
+      {/block:Posts}
+
+    </section><!--#postlist-->
+
+    <aside id="sidebar">
+      <h3>Search</h3>
+
+      <form id="search-form" action="/search" method="get">
+        <div>
+          <input id="search" type="search" placeholder="Search&hellip;" autosave="tmmd" results="0" name="q" maxlength="80" />
+          <input type="submit" value="Search" />
+        </div>
+      </form>
+    </aside>
+
+    <nav>
+    {block:Pagination}
+      <p class="present">Page <strong>{CurrentPage}</strong> of <strong>{TotalPages}</strong></p>
+      {block:NextPage}<p class="past"><a href="{NextPage}" rel="prev">Older Posts</a></p>{/block:NextPage}
+      {block:PreviousPage}<p class="future"><a href="{PreviousPage}" rel="next">Newer Posts</a></p>{/block:PreviousPage}
+    {/block:Pagination}
+
+    {block:PermalinkPagination}
+      {block:PreviousPost}<p class="past"><a href="{PreviousPost}" rel="prev">Previous Post</a></p>{/block:PreviousPost}
+      {block:NextPost}<p class="future"><a href="{NextPost}" rel="next">Next Post</a></p>{/block:NextPost}
+    {/block:PermalinkPagination}
+
+    {block:DayPagination}
+      {block:PreviousDayPage}<p class="past"><a href="{PreviousDayPage}" rel="prev">Previous Day</a></p>{/block:PreviousDayPage}
+      {block:NextDayPage}<p class="future"><a href="{NextDayPage}" rel="next">Next Day</a></p>{/block:NextDayPage}
+    {/block:DayPagination}
+    </nav>
+
+  </div><!--#wrapper-->
+
+    <!--[if lte IE 8]><p id="ie">Hi! Unfortunately, Internet Explorer doesn't support some of the best features of this site. If you upgrade to a better browser such as <a href="http://www.google.com/chrome/">Google Chrome</a>, <a href="http://www.mozilla-europe.org/en/firefox/">Mozilla Firefox</a> or <a href="http://www.apple.com/safari/">Apple's Safari</a> you'll be able to enjoy, not only this site, but the whole Web as it should be enjoyed! Give it a try&hellip; It would make my day. &mdash; <span>Sam</span></p><![endif]-->
+
+  </body>
+</html>
+
+<!--
+The road outside my house
+is paved with good intentions.
+Hired a construction crew,
+'cause it's hell on the engine.
+-->

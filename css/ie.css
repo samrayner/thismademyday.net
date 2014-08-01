@@ -1,0 +1,136 @@
+/*
+Title:      	IE Fixes
+Author:     	Sam Rayner - http://samrayner.com
+Updated:    	January 2010
+*/
+
+* { font-family: "Lucida Grande", verdana, sans-serif !important; }
+
+/* Message
+================================================== */
+
+body {
+	padding-top: 100px;
+}
+
+#ie {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+}
+
+#ie span { font-style: italic; }
+
+
+/* BACKGROUNDS
+================================================== */
+
+body 									{ background: #f5f5f3; }
+
+header p a:link, 
+header p a:visited 		{ background-color: #cee2e0; }
+
+header p a:hover, 
+header p a:active, 
+header p a:focus 			{ background-color: #a3cbca; }
+
+#search-results ul,
+#search-results li a:hover, 
+#search-results li a:active,
+#search-results li a:focus,
+pre, th, code, 
+.chat .odd cite				{ background-color: #e5e4e1; }
+
+nav a:link,
+nav a:visited,
+.tags a:link,
+.tags a:visited 			{ background-color: #313130; }
+
+nav a:hover,
+nav a:active,
+nav a:focus,
+.tags a:hover,
+.tags a:active,
+.tags a:focus					{ background-color: #494949; }
+
+.chat .even cite			{ background-color: #e6d2d1; }
+
+.post-date:link, 
+.post-date:visited 		{ background-color: #963232; }
+
+.post-date:hover,
+.post-date:active,
+.post-date:focus 			{ background-color: #aa4646; }
+
+mark,
+#filter-banner,
+#ie 									{ background-color: #f7de92; }
+
+.media, 
+.post-body img, 
+.notes 								{ background-color: #ebebe9; }
+
+
+/* TEXT
+================================================== */
+
+/* Blacks
+-------------------------------------------------- */
+
+body,
+header a:link,
+header a:visited,
+h2 a:link,
+h2 a:visited,
+h3 a:link,
+h3 a:visited,
+h4 a:link,
+h4 a:visited,
+#search-results li a 	{ color: #222; }
+
+code,
+header a:hover,
+header a:active,
+header a:focus,
+h2 a:hover, h2 a:active, h2 a:focus,
+h3 a:hover, h3 a:active, h3 a:focus,
+h4 a:hover, h4 a:active, h4 a:focus { color: #000; }
+
+.audio .track { color: #555; }
+
+blockquote cite,
+.note-count 					{ color: #666; }
+
+/* Greens
+-------------------------------------------------- */
+
+a:link, a:visited	{ color: #329696; }
+
+a:hover, a:active, a:focus { color: #0f5050; }
+
+/* Whites
+-------------------------------------------------- */
+
+.audio h2, .audio h3,
+#post-list .post-date,
+#wrapper nav a,
+#wrapper .tags a 	{ color: #fff; }
+
+
+/* BORDERS
+================================================== */
+
+th, td,
+abbr, acronym,
+.audio_player embed { border-color: #ccc; }
+
+#search-results li a,
+.notes li,
+.post-date,
+.tags a,
+nav a,
+.media,
+.post-body img,
+.chat cite,
+#filter-banner,
+.notes 					{ border: none; }

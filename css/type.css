@@ -1,0 +1,181 @@
+/*
+Title:      	Typography Styles
+Author:     	Sam Rayner - http://samrayner.com
+Updated:    	January 2010
+*/
+
+
+/* @FONT-FACE
+================================================== */
+
+@font-face {
+	font-family: 'Alexandria';
+	src: url('http://assets.thismademyday.net/fonts/AlexandriaFLF.eot');
+	src: local('AlexandriaFLF Regular'), local('AlexandriaFLF'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF.woff') format('woff'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF.ttf') format('truetype'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF.svg#AlexandriaFLF') format('svg');
+}
+
+@font-face {
+	font-family: 'Alexandria';
+	font-weight: bold;
+	src: url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Bold.eot');
+	src: local('AlexandriaFLF Bold'), local('AlexandriaFLF-Bold'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Bold.woff') format('woff'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Bold.ttf') format('truetype'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Bold.svg#AlexandriaFLF-Bold') format('svg');
+}
+
+@font-face {
+	font-family: 'Alexandria';
+	font-style: italic;
+	src: url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Italic.eot');
+	src: local('AlexandriaFLF Italic'), local('AlexandriaFLF-Italic'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Italic.woff') format('woff'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Italic.ttf') format('truetype'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-Italic#AlexandriaFLF-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'Alexandria-BoldItalic';
+	font-family: 'Alexandria';
+	font-weight: bold;
+	font-style: italic;
+	src: url('http://assets.thismademyday.net/fonts/AlexandriaFLF-BoldItalic.eot');
+	src: local('AlexandriaFLF Bold Italic'), local('AlexandriaFLF-BoldItalic'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-BoldItalic.woff') format('woff'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-BoldItalic.ttf') format('truetype'), 
+	url('http://assets.thismademyday.net/fonts/AlexandriaFLF-BoldItalic#AlexandriaFLF-BoldItalic') format('svg');
+}
+
+
+/* FONT STACKS
+================================================== */
+
+body,
+.album,
+#filter-banner,
+.notes blockquote { font-family: "Lucida Grande", verdana, sans-serif; }
+
+header,
+h1, h2, h3, h4,
+.post-date,
+blockquote 				{ font-family: alexandria, "Lucida Grande", verdana, sans-serif; }
+
+pre, code, tt 		{ font-family: menlo, monaco, consolas, "Lucida Console", courier, monospace; }
+
+
+/* SIZES / SPACING
+================================================== */
+
+body,
+.album,
+#filter-banner { 
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.audio h2 span,
+.quote blockquote, 
+h2, h3 					{ font-size: 18px; }
+
+header, h4,
+blockquote,
+.quote cite 		{ font-size: 16px; }
+
+#search-results p,
+pre, code, tt,
+.notes blockquote,
+nav, .notes 		{ font-size: 12px; }
+
+.tags  					{ font-size: 10px; }
+
+.note-count 		{ font-size: 9px; }
+
+h2 							{ font-size: 24px; }
+ 
+.day						{ font-size: 28px; }
+
+.audio h2 			{ font-size: 0; }
+
+sup, sub 				{ line-height: 0; }
+ 
+h2,
+.day 						{ line-height: 1; }
+
+.quote blockquote,
+header, h4			{ line-height: 1.1; }
+
+.note-count 		{ line-height: 1.5; }
+
+pre, code				{ white-space: pre; }
+
+table 					{ text-align: left; }
+
+.meta						{	text-align: center; }
+
+
+/* WEIGHTS / STYLES
+================================================== */
+
+h1, h2, h3, h4, 
+header a, strong,
+#filter-banner strong
+dfn, dt, th,
+.post-date,
+nav a,
+.tags a, 
+.note-count,
+.answer .action { font-weight: bold; }
+
+.album,
+.answer .answer_content,
+#filter-banner 	{ font-weight: normal; }
+
+address, dfn, 
+em, tfoot 			{ font-style: italic; }
+
+pre, code,
+tt, cite 				{ font-style: normal; }
+
+.post-date,
+.note-count 		{ text-transform: uppercase; }
+
+
+/* DECORATION
+================================================== */
+
+html {
+	-webkit-font-smoothing: antialiased;
+}
+
+a:link 					{ text-decoration: underline; }
+
+a,
+header a:link,
+h2 a:link,
+h3 a:link,
+h4 a:link,
+.post-date:link,
+#search-results li a,
+nav a:link,
+.tags a:link 		{ text-decoration: none; }
+
+body						{ text-shadow: rgba(255, 255, 255, 1) 1px 1px 1px; }
+
+.post-date,
+nav a						{ text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 1px !important; }
+
+.tags a 				{ text-shadow: none; }
+
+/* LISTS
+================================================== */
+
+ul          		{ list-style-type: disc; }
+ol          		{ list-style-type: decimal; }
+
+#search-results ul,
+.tags ul,
+.dialog,
+.notes 					{ list-style: none; }
